@@ -1,0 +1,78 @@
+.formGrid {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 40px;
+  .inputChild,
+  .textArea {
+    outline: none;
+    display: block;
+    background: rgba(128, 128, 128, 0.11);
+    border: 2px solid #6fb5a1;
+    padding: 10px;
+    margin: 10px auto;
+    color: white;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    &::placeholder {
+      color: white;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+.imgCont {
+  margin-top: 130px;
+  display: flex;
+  margin-bottom: 30px;
+  img {
+    margin: 0 auto;
+  }
+}
+.inputChild {
+  width: 100%;
+}
+.textArea {
+  width: 70%;
+}
+.input {
+  width: 70%;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+.btnContainer {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.submit {
+  padding: 8px 25px;
+  border: 1px solid #6fb5a1;
+  background: rgba(128, 128, 128, 0.11);
+  color: white;
+  justify-self: flex-end;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+.submit:hover {
+  background-color: transparent;
+}
+@media (max-width: 850px) {
+  .input {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .input,
+  .textArea,
+  .btnContainer {
+    width: 90%;
+  }
+}

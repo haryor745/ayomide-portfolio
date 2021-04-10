@@ -1,65 +1,156 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import styled from "../styles/Home.module.scss";
+import Link from "next/link";
+const servicesArray = [
+  {
+    id: 1,
+    title: "WEB DEVELOPMENT",
+    text:
+      "I have gained a lot of experience building many responsive websites. I have developed a personal approach to testing different solutions that has brought me to design better.",
+    img: "./icons/computer.png",
+  },
+  {
+    id: 2,
+    title: "SEO",
+    text:
+      "I have gained a lot of experience building many responsive websites. I have developed a personal approach to testing different solutions that has brought me to design better.",
+    img: "./icons/search.png",
+  },
+  {
+    id: 3,
+    title: "CYBER-SECURITY",
+    text:
+      "I have gained a lot of experience building many responsive websites. I have developed a personal approach to testing different solutions that has brought me to design better.",
+    img: "./icons/lock.png",
+  },
+  {
+    id: 4,
+    title: "MOBILE APP DEVELOPMENT",
+    text:
+      "I have gained a lot of experience building many responsive websites. I have developed a personal approach to testing different solutions that has brought me to design better.",
+    img: "./icons/phone.png",
+  },
+];
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Home | Ayomide</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+      <div className={styled.hero}>
+        <div className={styled.me}>
+          <div className={styled.bio}>
+            <h2>Hey!</h2>
+            <h1>
+              I’m <span>Ayomide</span>
+            </h1>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              A front-end developer from <br /> Lagos, Nigeria.
             </p>
-          </a>
+            <Link href="/contact">
+              <a className="btn" style={{ marginTop: "40px" }}>
+                Get in touch
+                {/* <img src="./icons/Group.png" alt="arrow" /> */}
+              </a>
+            </Link>
+          </div>
+          <div className={styled.heroImg}>
+            <img src="./images/hero-image.png" alt="hero-image" />
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <div className={styled.heroBottom}>
+          <div className={styled.mouse}>
+            <span>
+              <img src="./icons/mouse.png" alt="mouse" />
+            </span>
+            <span>
+              <p>Scroll down</p>
+            </span>
+          </div>
+          <div className={styled.social}>
+            <img src="./icons/facebook.png" alt="fb" />
+            <img src="./icons/insta.png" alt="insta" />
+            <img src="./icons/twitter.png" alt="twitter" />
+            <img
+              src="./icons/github.png"
+              alt="github"
+              className={styled.shockA}
+            />
+            <img
+              src="./icons/linkedin.png"
+              alt="linked-in"
+              className={styled.shockB}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="services">
+        <div className="head">
+          <h2>Services</h2>
+          <div className="line"></div>
+        </div>
+        <div className={styled.servicesGrid}>
+          {servicesArray.map((card) => {
+            return (
+              <div className={styled.card} key={card.id}>
+                <img src={card.img} alt="img" />
+                <h2>{card.title}</h2>
+                <p>{card.text}</p>
+                <h1>0{card.id}</h1>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className={styled.works}>
+        <div className="head">
+          <h2>Work</h2>
+          <div className="line"></div>
+        </div>
+        <div className={styled.worksGrid}>
+          <div className={styled.work}>
+            <img src="./works/coffee.png" alt="img" />
+            <div className={styled.workText}>
+              <h2>Frontend Mentor Coffeeroasters Site</h2>
+              <h3 className="haas">
+                <span style={{ color: "#e56037", marginRight: "30px" }}>
+                  ReactJS
+                </span>
+                <span style={{ color: "#6fb5a1" }}>SCSS</span>
+              </h3>
+              <a href="https://coffeeroasterz.netlify.app/">
+                <div className={styled.workLink}>
+                  <img src="./icons/Link.png" alt="img" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div className={styled.work}>
+            <img src="./works/country.png" alt="img" />
+            <div className={styled.workText}>
+              <h2>Frontend Mentor REST Countries API</h2>
+              <h3 className="haas">
+                <span style={{ color: "#e56037", marginRight: "30px" }}>
+                  ReactJS
+                </span>
+                <span style={{ color: "#6fb5a1" }}>SCSS</span>
+              </h3>
+              <a href="https://harcountries.netlify.app/">
+                <div className={styled.workLink}>
+                  <img src="./icons/Link.png" alt="img" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <Link href="/work">
+          <a className="btn">
+            See More
+            <img src="./icons/Group.png" alt="arrow" />
+          </a>
+        </Link>
+      </div>
+    </>
+  );
 }

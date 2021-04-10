@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    margin-right: 10px;
+  }
+}
+.linksCont {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-around;
+}
+@media (max-width: 900px) {
+  .linksCont {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+  .social {
+    margin: 6px 0;
+    justify-content: center;
+    &:nth-child(4) {
+      transform: translateY(-5px);
+    }
+    &:nth-child(5) {
+      transform: translateY(-12px);
+    }
+  }
+  .fh {
+    font-size: 23px;
+  }
+}

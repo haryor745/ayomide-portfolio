@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "BigillaBold";
+  src: url("../fonts/BigillaBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GrandSlang B-Side";
+  src: url("../fonts/GrandSlang-B-Side.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Stinger-Fit Bold";
+  src: url("../fonts/StingerFit-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Stinger-Fit Regular";
+  src: url("../fonts/StingerFit-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Stinger-Fit Light";
+  src: url("../fonts/StingerFit-Light.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Grotesk";
+  src: url("../fonts/NHaasGroteskDSPro-76BdIt.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,95 @@
+.links {
+  transition: 0.3s;
+  a:not(:nth-child(3)) {
+    margin-right: 25px;
+  }
+  a {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    position: relative;
+    &:hover {
+      &::after {
+        transform: scale(1);
+      }
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      transform: scale(0);
+      transition: 0.3s;
+      transform-origin: left;
+      bottom: -3px;
+    }
+  }
+}
+.hidden {
+  overflow: hidden;
+}
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30vh;
+  max-height: 130px;
+  max-width: 1400px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.header {
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 500px) {
+  .button {
+    display: initial;
+  }
+  .links {
+    position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 4;
+    background: url("./Desktop\ -\ 6.png");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    a {
+      font-size: 30px;
+      opacity: 0;
+      transition: 0.3s;
+      margin-top: 12px;
+      &::after {
+        height: 3px;
+      }
+    }
+    a:not(:nth-child(3)) {
+      margin-right: 0;
+    }
+  }
+  .links.down {
+    padding-top: 60px;
+    height: calc(100vh - 130px);
+    a {
+      opacity: 1;
+    }
+  }
+}
